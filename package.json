@@ -4,8 +4,8 @@
   "description": "API desarrollada para consultas a la base de datos, para la aplcacion de \"conexion de un modulo de variables del laboratorios de PLC del ITM\" ",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
     "lint": "eslint"
   },
   "keywords": [
