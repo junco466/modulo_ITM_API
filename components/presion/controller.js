@@ -34,7 +34,23 @@ async function addData(data){
         return Promise.reject('invalid data insertion');
     }
 
-    return store.add(data);
+    const newData = {
+        "sensor": data.sensor,
+        "sw_presion": data.sw_presion,
+        "controlPVH": data.controlPVH,
+        "valv_proporcional": data.valv_proporcional,
+        "time.fecha" : data.fecha,
+        "time.hora" : data.hora,
+        "control.enable" : data.enable,
+        "control.modo" : data.modo,
+        "control.sp" : data.sp,
+        "control.P" : data.P,
+        "control.I" : data.I,
+        "control.D" : data.D,
+        "control.manual" : data.manual,
+    }
+
+    return store.add(newData);
 }
 
 module.exports = {

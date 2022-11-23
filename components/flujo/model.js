@@ -6,15 +6,16 @@ let flujoSchema = new Schema(
 
     {
 
-        "time" : Date,
         "sensor": Number,
+        "time" : {
+            "fecha": String,
+            "hora": String,
+        },
         "variador": {
             "frecuencia": Number,
             "valorPLC": Number,
         },
-
         "control": {
-
             "enable": Boolean,
             "modo": String,
             "sp": Number,
@@ -22,7 +23,6 @@ let flujoSchema = new Schema(
             "I": Number,
             "D": Number,
             "manual": String,
-
         }
 
     },

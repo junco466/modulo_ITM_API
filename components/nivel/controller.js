@@ -4,8 +4,6 @@ function getAllData(){
     return store.list();
 }
 
-
-
 async function getSensor(){
     let data = await store.listSensor();
 

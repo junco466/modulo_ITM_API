@@ -1,17 +1,15 @@
-const presionModel = require('./model');
+const nivelModel = require('./model');
 
 function getAllData(){
-    return presionModel.find()
+    return nivelModel.find()
 }
 
 function getSensor(){
-    return presionModel.find({
-        //"payload.sensor": 9.219466908885872,
-    },"payload.sensor")
+    return nivelModel.find({},"sensor time.fecha time.hora")
 }
 
 function addData(data){
-    let newData = new presionModel(data)
+    let newData = new nivelModel(data)
     return newData.save();
 }
 

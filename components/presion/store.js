@@ -7,7 +7,7 @@ function getAllData(){
 function getSensor(){
     return presionModel.find({
         //"payload.sensor": 9.219466908885872,
-    },"payload.sensor")
+    },"sensor time.fecha time.hora")
 }
 
 function addData(data){

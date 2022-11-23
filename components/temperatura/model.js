@@ -6,10 +6,14 @@ let tempSchema = new Schema(
 
     {
 
-        "time" : Date,
         "sensorTemp": Number,
         "sensorNiv": Number,
         "PWM" : Boolean,
+
+        "time" : {
+            "fecha": String,
+            "hora": String,
+        },
 
         "control": {
 

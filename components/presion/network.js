@@ -22,8 +22,15 @@ router.get('/sensor', (req, res) => {
         })
 })
 
-router.post('/in', (req, res) => {
-    controller.addData()
+router.post('/', (req, res) => {
+
+    console.log(req.body);
+    controller.addData(req.body)
+        .then( data => {
+            response.success(req, res, data, 201);
+        }).catch(e =>{
+            response.error(req, res, 'Internal error', 500 , e);
+        })
 })
 
 module.exports = router;
