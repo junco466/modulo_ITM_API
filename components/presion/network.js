@@ -22,4 +22,8 @@ router.get('/sensor', (req, res) => {
         })
 })
 
+router.post('/in', (req, res) => {
+    controller.addData()
+})
+
 module.exports = router;

@@ -6,10 +6,10 @@ const nivel = require('../components/nivel/network');
 const enviar = require('../components/enviar/network');
 
 const routes = function(server){
-  server.use('/presion', presion);
+    server.use('/presion', presion);
 //   server.use('/flujo', flujo)
 //   server.use('/temperatura', temperatura)
-//   server.use('/nivel', nivel);
+    server.use('/nivel', nivel);
 //   server.use('/enviar', enviar);
 }
 

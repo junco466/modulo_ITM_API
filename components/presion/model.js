@@ -5,23 +5,24 @@ const Schema = mongoose.Schema;
 let presionSchema = new Schema(
 
     {
-        "payload":{
 
-            "time": Date,
-            "sensor": Number,
-            "sw_presion": Boolean,
-            "controlPVH": Boolean,
-            "valv_proporcional": Number,
+        payload:{
 
-            "control": {
+            time: Date,
+            sensor: Number,
+            sw_presion: Boolean,
+            controlPVH: Boolean,
+            valv_proporcional: Number,
 
-                "enable": Boolean,
-                "modo": String,
-                "sp": Number,
-                "P": Number,
-                "I": Number,
-                "D": Number,
-                "manual": String,
+            control: {
+
+                enable: Boolean,
+                modo: String,
+                sp: Number,
+                P: Number,
+                I: Number,
+                D: Number,
+                manual: String,
 
             }
         }

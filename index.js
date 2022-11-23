@@ -13,7 +13,7 @@ class API {
         this.app = express();
         server.Server(this.app);
         //--------------------------------------
-        this.router = router(this.app)
+        //this.router = router(this.app)
         this.dataBaseConnection();
         this.serverConfig();
     }
@@ -23,6 +23,7 @@ class API {
         this.app.use(bodyParser.urlencoded({extended: false}));
         this.app.use('/app', express.static('public'));
         this.app.set('port', process.env.PORT || 3000);
+        this.router = router(this.app)
 
         this.app.listen(this.app.get('port'), () => {
             console.log("Servidor corriendo por el puerto => ", this.app.get('port'));

@@ -5,9 +5,18 @@ function getAllData(){
 }
 
 function getSensor(){
-    return presionModel.find({sw_presion})
+    return presionModel.find({
+        //"payload.sensor": 9.219466908885872,
+    },"payload.sensor")
+}
+
+function addData(data){
+    let newData = new presionModel(data)
+    return newData.save();
 }
 
 module.exports = {
     list: getAllData,
+    listSensor : getSensor,
+    add: addData,
 }
