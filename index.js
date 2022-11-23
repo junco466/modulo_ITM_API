@@ -21,7 +21,7 @@ class API {
     serverConfig(){
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({extended: false}));
-        this.app.use('/app', express.static('public'));
+        this.app.use('/', express.static('public'));
         this.app.set('port', process.env.PORT || 3000);
         this.router = router(this.app)
 
