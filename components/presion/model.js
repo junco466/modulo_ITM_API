@@ -7,7 +7,7 @@ let presionSchema = new Schema(
     {
 
         sensor: Number,
-        sw_presion: Boolean,
+        presostato: Boolean,
         controlPVH: Boolean,
         valv_proporcional: Number,
 

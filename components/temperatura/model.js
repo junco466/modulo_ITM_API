@@ -17,7 +17,6 @@ let tempSchema = new Schema(
 
         "control": {
 
-            "enable": Boolean,
             "modo": String,
             "sp": Number,
             "P": Number,
