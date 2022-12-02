@@ -20,6 +20,7 @@ async function addData(data){
     const newData = {
         "sensorTemp": data.sensorTemp,
         "sensorNiv": data.sensorNiv,
+        "nivMinimo": data.nivMinimo,
         "PWM": data.PWM,
         "time.fecha" : data.fecha,
         "time.hora" : data.hora,

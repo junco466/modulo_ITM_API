@@ -36,7 +36,7 @@ async function addData(data){
 
     const newData = {
         "sensor": data.sensor,
-        "sw_presion": data.sw_presion,
+        "presostato": data.presostato,
         "controlPVH": data.controlPVH,
         "valv_proporcional": data.valv_proporcional,
         "time.fecha" : data.fecha,

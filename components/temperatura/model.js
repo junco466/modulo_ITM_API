@@ -8,6 +8,7 @@ let tempSchema = new Schema(
 
         "sensorTemp": Number,
         "sensorNiv": Number,
+        "nivMinimo": Boolean,
         "PWM" : Boolean,
 
         "time" : {
@@ -17,6 +18,7 @@ let tempSchema = new Schema(
 
         "control": {
 
+            "enable": Boolean,
             "modo": String,
             "sp": Number,
             "P": Number,
