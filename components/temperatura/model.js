@@ -24,7 +24,7 @@ let tempSchema = new Schema(
             "P": Number,
             "I": Number,
             "D": Number,
-            "manual": String,
+            "manual": Number,
 
         }
 

@@ -1,4 +1,3 @@
-const { model } = require('mongoose');
 const store = require('./store');
 
 function getAllData(){
