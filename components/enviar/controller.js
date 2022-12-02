@@ -64,6 +64,11 @@ function infoController(data, selector){
     })
 }
 
+function getAllData(){
+    return store.list();
+}
+
 module.exports = {
-    infoController
+    infoController,
+    getAllData
 }

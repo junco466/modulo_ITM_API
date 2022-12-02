@@ -1,5 +1,10 @@
 const enviarModel = require('./model');
 
+
+function getAllData(){
+    return enviarModel.find()
+}
+
 async function insertInfo(info, selector){
 
     const oldInfo = await enviarModel.findOne({
@@ -26,7 +31,8 @@ async function insertInfo(info, selector){
 }
 
 module.exports = {
-    insertInfo
+    insertInfo,
+    list : getAllData,
 }
 
 

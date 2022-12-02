@@ -13,3 +13,12 @@ router.patch('/:sensorSelector', function(req,res){
                     response.error(req,res,'Error Interno',500,e)
                 })
 })
+
+router.get('/', (req, res) => {
+    controller.getAllData()
+        .then((data) => {
+            response.success(req, res, data, 200);
+        }).catch(e => {
+            response.error(req, res, '[controller]: Unexpected Error', e)
+        })
+})
