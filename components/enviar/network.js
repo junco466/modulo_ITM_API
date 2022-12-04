@@ -22,3 +22,5 @@ router.get('/', (req, res) => {
             response.error(req, res, '[controller]: Unexpected Error', e)
         })
 })
+
+module.exports = router;
