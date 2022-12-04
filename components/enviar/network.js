@@ -4,7 +4,7 @@ const controller = require('./controller')
 
 const router = express.Router();
 
-router.patch('/:sensorSelector', function(req,res){
+router.patch('/:selector', function(req,res){
 
     controller.infoController(req.body, req.params.sensorSelector)
                 .then((data) => {
