@@ -11,7 +11,7 @@ async function insertInfo(info, selector){
         _id: "638d429c4b3bf427e275e465"
     })
 
-    console.log(oldInfo.presion)
+    // console.log(oldInfo.presion)
     switch(selector){
         case 'presion':
             oldInfo.presion = info
