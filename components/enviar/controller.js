@@ -7,56 +7,14 @@ function infoController(data, selector){
             return false;
         }
 
-        switch(selector){
-
-            case 'presion':
-                newInfo = {
-                    "presion.enable": data.enable,
-                    "presion.modo": data.modo,
-                    "presion.control.sp": data.sp,
-                    "presion.control.P": data.P,
-                    "presion.control.I": data.I,
-                    "presion.control.D": data.D,
-                    "presion.control.manual": data.manual,
-                }
-                break;
-
-            case 'nivel':
-                newInfo = {
-                    "nivel.enable": data.enable,
-                    "nivel.modo": data.modo,
-                    "nivel.control.sp": data.sp,
-                    "nivel.control.P": data.P,
-                    "nivel.control.I": data.I,
-                    "nivel.control.D": data.D,
-                    "nivel.control.manual": data.manual,
-                }
-                break;
-
-            case 'flujo':
-                newInfo = {
-                    "flujo.enable": data.enable,
-                    "flujo.modo": data.modo,
-                    "flujo.control.sp": data.sp,
-                    "flujo.control.P": data.P,
-                    "flujo.control.I": data.I,
-                    "flujo.control.D": data.D,
-                    "flujo.control.manual": data.manual,
-                }
-                break;
-
-            case 'temp':
-                newInfo = {
-                    "temp.enable": data.enable,
-                    "temp.modo": data.modo,
-                    "temp.control.sp": data.sp,
-                    "temp.control.P": data.P,
-                    "temp.control.I": data.I,
-                    "temp.control.D": data.D,
-                    "temp.control.manual": data.manual,
-                }
-                break;
-
+        newInfo = {
+            "enable": data.enable,
+            "modo": data.modo,
+            "control.sp": data.sp,
+            "control.P": data.P,
+            "control.I": data.I,
+            "control.D": data.D,
+            "control.manual": data.manual,
         }
 
         const result = await store.insertInfo(newInfo,selector);
@@ -72,3 +30,56 @@ module.exports = {
     infoController,
     getAllData
 }
+
+
+
+
+
+// {
+//     "_id":{"$oid":"638d429c4b3bf427e275e465"},
+//     "presion": {
+//               "control": {
+//                   "sp": 0,
+//                   "P": 0,
+//                   "I": 0,
+//                   "D": 0,
+//                   "manual": 0
+//               },
+//               "enable": false,
+//               "modo": "OFF"
+//           },
+//     "nivel": {
+//               "control": {
+//                   "sp": 0,
+//                   "P": 0,
+//                   "I": 0,
+//                   "D": 0,
+//                   "manual": 0
+//               },
+//               "enable": false,
+//               "modo": "OFF"
+//           },
+//     "flujo": {
+//               "control": {
+//                   "sp": 0,
+//                   "P": 0,
+//                   "I": 0,
+//                   "D": 0,
+//                   "manual": 0
+//               },
+//               "enable": false,
+//               "modo": "OFF"
+//           },
+//     "temperatura": {
+//               "control": {
+//                   "sp": 0,
+//                   "P": 0,
+//                   "I": 0,
+//                   "D": 0,
+//                   "manual": 0
+//               },
+//               "enable": false,
+//               "modo": "OFF"
+//           }
+
+//   }

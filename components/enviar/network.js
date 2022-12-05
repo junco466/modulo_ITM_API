@@ -4,9 +4,9 @@ const controller = require('./controller')
 
 const router = express.Router();
 
-router.patch('/:selector', function(req,res){
+router.patch('/:sel', function(req,res){
 
-    controller.infoController(req.body, req.params.sensorSelector)
+    controller.infoController(req.body, req.params.sel)
                 .then((data) => {
                     response.success(req,res,data,200)
                 }).catch(e => {

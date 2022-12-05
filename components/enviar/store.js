@@ -8,21 +8,22 @@ function getAllData(){
 async function insertInfo(info, selector){
 
     const oldInfo = await enviarModel.findOne({
-        _id: "638a456eb06e8e2f1954629a"
+        _id: "638d429c4b3bf427e275e465"
     })
 
+    console.log(oldInfo.presion)
     switch(selector){
         case 'presion':
-            oldInfo.presion = info.presion
+            oldInfo.presion = info
             break;
         case 'nivel':
-            oldInfo.nivel = info.nivel
+            oldInfo.nivel = info
             break;
         case 'flujo':
-            oldInfo.flujo = info.flujo
+            oldInfo.flujo = info
             break;
         case 'temp':
-            oldInfo.temperatura = info.temp
+            oldInfo.temperatura = info
             break;
     }
 
