@@ -6,19 +6,19 @@ function getAllData(){
 }
 
 function listPresion(){
-    return flujoModel.find({},"presion")
+    return enviarModel.find({},"presion")
 }
 
 function listFlujo(){
-    return flujoModel.find({},"flujo")
+    return enviarModel.find({},"flujo")
 }
 
 function listNivel(){
-    return flujoModel.find({},"nivel")
+    return enviarModel.find({},"nivel")
 }
 
 function listTemp(){
-    return flujoModel.find({},"temperatura")
+    return enviarModel.find({},"temperatura")
 }
 
 async function insertInfo(info, selector){
