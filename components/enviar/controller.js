@@ -26,9 +26,41 @@ function getAllData(){
     return store.list();
 }
 
+async function getPresion(){
+    let data = await store.listPresion();
+
+    console.log(data);
+    return data;
+}
+
+async function getNivel(){
+    let data = await store.listNivel();
+
+    console.log(data);
+    return data;
+}
+
+async function getFlujo(){
+    let data = await store.listFlujo();
+
+    console.log(data);
+    return data;
+}
+
+async function getTemp(){
+    let data = await store.listTemp();
+
+    console.log(data);
+    return data;
+}
+
 module.exports = {
     infoController,
-    getAllData
+    getAllData,
+    getPresion,
+    getNivel,
+    getFlujo,
+    getTemp,
 }
 
 

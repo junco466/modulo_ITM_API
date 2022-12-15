@@ -23,4 +23,40 @@ router.get('/', (req, res) => {
         })
 })
 
+router.get('/presion', (req, res) => {
+    controller.getPresion()
+        .then((data) => {
+            response.success(req, res, data, 200);
+        }).catch(e => {
+            response.error(req, res, '[controller]: Unexpected Error', e)
+        })
+})
+
+router.get('/nivel', (req, res) => {
+    controller.getNivel()
+        .then((data) => {
+            response.success(req, res, data, 200);
+        }).catch(e => {
+            response.error(req, res, '[controller]: Unexpected Error', e)
+        })
+})
+
+router.get('/flujo', (req, res) => {
+    controller.getFlujo()
+        .then((data) => {
+            response.success(req, res, data, 200);
+        }).catch(e => {
+            response.error(req, res, '[controller]: Unexpected Error', e)
+        })
+})
+
+router.get('/temperatura', (req, res) => {
+    controller.getTemp()
+        .then((data) => {
+            response.success(req, res, data, 200);
+        }).catch(e => {
+            response.error(req, res, '[controller]: Unexpected Error', e)
+        })
+})
+
 module.exports = router;

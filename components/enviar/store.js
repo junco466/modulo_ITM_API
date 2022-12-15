@@ -5,6 +5,22 @@ function getAllData(){
     return enviarModel.find()
 }
 
+function listPresion(){
+    return flujoModel.find({},"presion")
+}
+
+function listFlujo(){
+    return flujoModel.find({},"flujo")
+}
+
+function listNivel(){
+    return flujoModel.find({},"nivel")
+}
+
+function listTemp(){
+    return flujoModel.find({},"temperatura")
+}
+
 async function insertInfo(info, selector){
 
     const oldInfo = await enviarModel.findOne({
@@ -34,6 +50,10 @@ async function insertInfo(info, selector){
 module.exports = {
     insertInfo,
     list : getAllData,
+    listPresion,
+    listFlujo,
+    listNivel,
+    listTemp,
 }
 
 
